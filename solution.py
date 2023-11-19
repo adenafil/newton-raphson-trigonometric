@@ -11,9 +11,7 @@ def derivativeF(x):
 
 # Method untuk menghitung iterasi dengan methode newton raphson
 def newtonRaphson(x0, iterasi):
-  # Initialize the error
-  error = 1
-  # Initialize the iteration counter
+  # deklarasi iterasi
   n = 0
   # Loop until the error is less than the tolerance
   while n != iterasi:
