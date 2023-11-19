@@ -23,13 +23,13 @@ def newtonRaphson(x0, iterasi):
     x1 = round(x1, 4)
     # Update the previous approximation
     x0 = x1
-    # Increment the iteration counter
+    # melakuakn increment
     n += 1
-    # Print the iteration details
+    # console.log hasil
     print(
         f"Iteration {n}: x = {x1}, f(x) = {f(x1)}, f'(x) = {derivativeF(x0)} ."
         )
-  # Return the final approximationr
+  # return nilai hasil iterasi 
   return x1
 
 # Deklarasi nilai awal
@@ -38,7 +38,7 @@ x0 = int(input());
 # Deklarasi nilai batas iterasi
 print("Masukan max jumlah iterasi : ");
 iterasi = int(input());
-# Call the Newton Raphson method
+# invoke atau memanggil method dengan menampung ke result
 result = newtonRaphson(x0, iterasi)
-# Print the final result
+# console.log hasil
 print(f"hasil iterasi sebanyak {iterasi} dari perhitungan f(x) = sin(x) - x = {result}")
