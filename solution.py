@@ -11,30 +11,34 @@ def derivativeF(x):
 
 # Method untuk menghitung iterasi dengan methode newton raphson
 def newtonRaphson(x0, iterasi):
-  # Membuat index perhitungan
+  # Initialize the error
+  error = 1
+  # Initialize the iteration counter
   n = 0
-  # Melakukan iterasi hingga unequal
+  # Loop until the error is less than the tolerance
   while n != iterasi:
-    # deklarasi rumus newton Raphson
+    # rumus newton Raphson
     x1 = x0 - f(x0)/derivativeF(x0)
     #membuat bilangan desimal menjadi 4 digit belakang
     x1 = round(x1, 4)
-    # update nilai x0 dari hasil x1
+    # Update the previous approximation
     x0 = x1
-    # Melakukan increment
+    # Increment the iteration counter
     n += 1
-    # console hasil perhitungan
+    # Print the iteration details
     print(
         f"Iteration {n}: x = {x1}, f(x) = {f(x1)}, f'(x) = {derivativeF(x0)} ."
         )
-  # Menngembalikan nilai akhir dari iterasi
+  # Return the final approximationr
   return x1
 
 # Deklarasi nilai awal
-x0 = 1
+print("Masukan nilai awal dari x : ");
+x0 = int(input());
 # Deklarasi nilai batas iterasi
-iterasi = 4
-# invoke methode dengan memberikan variabel karena butuh hasil akhir iterasi
+print("Masukan max jumlah iterasi : ");
+iterasi = int(input());
+# Call the Newton Raphson method
 result = newtonRaphson(x0, iterasi)
-# Console.log()
+# Print the final result
 print(f"hasil iterasi sebanyak {iterasi} dari perhitungan f(x) = sin(x) - x = {result}")
