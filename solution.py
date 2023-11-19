@@ -13,13 +13,13 @@ def derivativeF(x):
 def newtonRaphson(x0, iterasi):
   # deklarasi iterasi
   n = 0
-  # Loop until the error is less than the tolerance
+  # looping hingga n != 0
   while n != iterasi:
     # rumus newton Raphson
     x1 = x0 - f(x0)/derivativeF(x0)
     #membuat bilangan desimal menjadi 4 digit belakang
     x1 = round(x1, 4)
-    # Update the previous approximation
+    # update nilai x0 dengan hasil perhitungan x1
     x0 = x1
     # melakuakn increment
     n += 1
